@@ -1,0 +1,84 @@
+commit 808074dffab1d5c15d410df55f54d277b09bf35b
+Author: root <root@ip-172-31-17-9.eu-west-1.compute.internal>
+Date:   Sun Feb 10 23:02:26 2019 +0000
+
+    Change address.
+
+diff --git a/grid/Pegasus/mDAG.c b/grid/Pegasus/mDAG.c
+index 6d4ea14..563f3ae 100644
+--- a/grid/Pegasus/mDAG.c
++++ b/grid/Pegasus/mDAG.c
+@@ -2232,7 +2232,7 @@ int lookup(char *mosaicCenter, double *ra, double *dec)
+ 
+    char   result    [4096];
+ 
+-   strcpy(server, "irsa.ipac.caltech.edu");
++   strcpy(server, "localhost");
+ 
+    port = 80;
+ 
+diff --git a/grid/Pegasus/mDAGGalacticPlane.c b/grid/Pegasus/mDAGGalacticPlane.c
+index 2e3e0d2..c9c39ea 100644
+--- a/grid/Pegasus/mDAGGalacticPlane.c
++++ b/grid/Pegasus/mDAGGalacticPlane.c
+@@ -1612,7 +1612,7 @@ int lookup(char *mosaicCenter, double *ra, double *dec)
+ 
+    char   result    [4096];
+ 
+-   strcpy(server, "irsa.ipac.caltech.edu");
++   strcpy(server, "localhost");
+ 
+    port = 80;
+ 
+diff --git a/grid/Pegasus/mNotify.c b/grid/Pegasus/mNotify.c
+index 68108be..ad9b19a 100644
+--- a/grid/Pegasus/mNotify.c
++++ b/grid/Pegasus/mNotify.c
+@@ -58,7 +58,7 @@ int main(int argc, char **argv)
+       exit(0);
+    }
+ 
+-   strcpy(server, "irsa.ipac.caltech.edu");
++   strcpy(server, "localhost");
+ 
+    port = 80;
+ 
+diff --git a/util/Archive/ArchiveGet/mArchiveGet.c b/util/Archive/ArchiveGet/mArchiveGet.c
+index 62b1b93..5b2ae24 100644
+--- a/util/Archive/ArchiveGet/mArchiveGet.c
++++ b/util/Archive/ArchiveGet/mArchiveGet.c
+@@ -85,7 +85,7 @@ int main(int argc, char **argv)
+ 
+    fstatus = stdout;
+ 
+-   strcpy(hostStr, "irsa.ipac.caltech.edu");
++   strcpy(hostStr, "localhost");
+ 
+    debug   =  0;
+    opterr  =  0;
+diff --git a/util/Archive/ArchiveList/mArchiveList.c b/util/Archive/ArchiveList/mArchiveList.c
+index 1d64bca..9e71f8b 100644
+--- a/util/Archive/ArchiveList/mArchiveList.c
++++ b/util/Archive/ArchiveList/mArchiveList.c
+@@ -492,7 +492,7 @@ void set_server (char *survey, char *server)
+ {
+ 	if (strncmp (survey, "2mass", 5) == 0)
+ 	{
+-		strcpy(server, "irsa.ipac.caltech.edu");
++		strcpy(server, "localhost");
+ 		return;
+ 	}
+ 
+diff --git a/util/Hdr/mHdr.c b/util/Hdr/mHdr.c
+index 8ea5ec0..7587407 100644
+--- a/util/Hdr/mHdr.c
++++ b/util/Hdr/mHdr.c
+@@ -137,7 +137,7 @@ int main(int argc, char **argv)
+       exit(0);
+    }
+ 
+-   strcpy(server, "irsa.ipac.caltech.edu");
++   strcpy(server, "localhost");
+ 
+    port = 80;
+ 
