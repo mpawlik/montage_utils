@@ -12,6 +12,8 @@ Apply montage_localhost.patch to montage from: http://pegasus.isi.edu/montage/Mo
 ## montage_localhost.patch
 This patch changes the destination host for all requests aimed at https://irsa.ipac.caltech.edu. After patching requests are directed at localhost.
 
+Replace https:// with http:// in images.tbl if you get errors during download.
+
 ## proxy.py
 This simple python2 script acts as a proxy, which proxies http requests to https server.
 
