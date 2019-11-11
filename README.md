@@ -14,6 +14,11 @@ This patch changes the destination host for all requests aimed at https://irsa.i
 
 Replace https:// with http:// in images.tbl if you get errors during download.
 
+Generated dag.xml contains misformatted file names, it seems that this can be fixed by piping dag contents through following seds:
+```
+sed 's/.fit.fits/.fits/' | sed 's/.fi_area.fits/_area.fits/' | sed 's/.fit_area.fits/_area.fits/
+```
+
 ## proxy.py
 This simple python2 script acts as a proxy, which proxies http requests to https server.
 
